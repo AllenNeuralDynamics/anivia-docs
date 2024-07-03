@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Anivia documentation"
@@ -14,6 +15,7 @@ website:
       - section: "Guides"
         contents:
           - guide_import_export.qmd
+          - guide_labeling_multiple_animals.qmd
       - section: "Reference"
         contents:
           - ref_formats.qmd

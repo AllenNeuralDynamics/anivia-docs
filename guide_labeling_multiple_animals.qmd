@@ -1,0 +1,11 @@
+# Labeling multiple animals
+
+Anivia supports labeling multiple animals, but only if you export to a SLEAP file currently.
+
+The interface focuses on one animal "instance" at a time. By default when you click to place points it places them in instance 0. 
+
+Here is how you navigate the instance interface:
+- "i" for new instance (or circle plus in toolbar)
+- "u" to delete an instance  (or circle minus in toolbar)
+- up and down arrows to switch between instances (or circle up and down in toolbar, or just click on a point from that instance)
+
