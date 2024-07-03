@@ -1,7 +1,5 @@
 ---
 title: "Labeling with anivia: a tutorial"
-author: "Lili Karashchuk"
-date: "2023-01-02"
 toc: true
 ---
 

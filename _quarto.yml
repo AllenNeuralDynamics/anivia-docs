@@ -3,11 +3,11 @@ project:
 
 website:
   title: "Anivia documentation"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - anivia_tutorial.qmd
 
 format:
   html:
