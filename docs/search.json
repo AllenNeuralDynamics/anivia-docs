@@ -11,7 +11,7 @@
     "href": "guide_labeling_multiple_animals.html",
     "title": "Labeling multiple animals",
     "section": "",
-    "text": "Labeling multiple animals\nAnivia supports labeling multiple animals, but only if you export to a SLEAP file currently.\nThe interface focuses on one animal “instance” at a time. By default when you click to place points it places them in instance 0.\nHere is how you navigate the instance interface: - “i” for new instance (or circle plus in toolbar) - “u” to delete an instance (or circle minus in toolbar) - up and down arrows to switch between instances (or circle up and down in toolbar, or just click on a point from that instance)",
+    "text": "Anivia supports labeling multiple animals, but only if you export to a SLEAP file currently.\nThe interface focuses on one animal “instance” at a time. By default when you click to place points it places them in instance 0.\nHere is how you navigate the instance interface: - “i” for new instance (or circle plus in toolbar) - “u” to delete an instance (or circle minus in toolbar) - up and down arrows to switch between instances (or circle up and down in toolbar, or just click on a point from that instance)",
     "crumbs": [
       "Guides",
       "Labeling multiple animals"
@@ -84,66 +84,22 @@
     ]
   },
   {
-    "objectID": "guide_import_export.html#from-deeplabcut",
-    "href": "guide_import_export.html#from-deeplabcut",
+    "objectID": "guide_import_export.html#importing-annotations",
+    "href": "guide_import_export.html#importing-annotations",
     "title": "Import and exporting annotations",
-    "section": "from DeepLabCut",
-    "text": "from DeepLabCut\nTo import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "section": "Importing annotations",
+    "text": "Importing annotations\n\nfrom DeepLabCut\nTo import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.\n\n\nfrom Lightning Pose\nTo import a Lightning Pose dataset, follow the steps below.\n\nIn the menu, click on: Import &gt; Load Lightning Pose dataset\nNavigate to your folder which contains “CollectedData.csv”\nSelect that folder and click “Upload”\n\n\n\nfrom SLEAP\nTo import a SLEAP dataset, follow these steps:\n\nIn the menu, click on: Import &gt; Load SLEAP dataset (SLP file)\nSelect your slp file and select “Upload”\n\nNote that SLP file must have the images padded with zeros to account for the javascript h5 loading library. This is already in the latest SLEAP code and will be available in future SLEAP releases. For now, you can use this python script to pad your video items.",
     "crumbs": [
       "Guides",
       "Import and exporting annotations"
     ]
   },
   {
-    "objectID": "guide_import_export.html#from-lightning-pose",
-    "href": "guide_import_export.html#from-lightning-pose",
+    "objectID": "guide_import_export.html#exporting-annotations",
+    "href": "guide_import_export.html#exporting-annotations",
     "title": "Import and exporting annotations",
-    "section": "from Lightning Pose",
-    "text": "from Lightning Pose\nTo import a Lightning Pose dataset, follow the steps below.\n\nIn the menu, click on: Import &gt; Load Lightning Pose dataset\nNavigate to your folder which contains “CollectedData.csv”\nSelect that folder and click “Upload”",
-    "crumbs": [
-      "Guides",
-      "Import and exporting annotations"
-    ]
-  },
-  {
-    "objectID": "guide_import_export.html#from-sleap",
-    "href": "guide_import_export.html#from-sleap",
-    "title": "Import and exporting annotations",
-    "section": "from SLEAP",
-    "text": "from SLEAP\nTo import a SLEAP dataset, follow these steps:\n\nIn the menu, click on: Import &gt; Load SLEAP dataset (SLP file)\nSelect your slp file and select “Upload”\n\nNote that SLP file must have the images padded with zeros to account for the javascript h5 loading library. This is already in the latest SLEAP code and will be available in future SLEAP releases. For now, you can use this python script to pad your video items.",
-    "crumbs": [
-      "Guides",
-      "Import and exporting annotations"
-    ]
-  },
-  {
-    "objectID": "guide_import_export.html#to-deeplabcut",
-    "href": "guide_import_export.html#to-deeplabcut",
-    "title": "Import and exporting annotations",
-    "section": "to DeepLabCut",
-    "text": "to DeepLabCut\nTo export your annotations to DeepLabCut, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nSave your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml\n\nNote: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.",
-    "crumbs": [
-      "Guides",
-      "Import and exporting annotations"
-    ]
-  },
-  {
-    "objectID": "guide_import_export.html#to-lightning-pose",
-    "href": "guide_import_export.html#to-lightning-pose",
-    "title": "Import and exporting annotations",
-    "section": "to Lightning Pose",
-    "text": "to Lightning Pose\nTo export your annotations to Lightning Pose, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (Lightning Pose format)\nSave your file as “CollectedData.csv” within the folder you imported",
-    "crumbs": [
-      "Guides",
-      "Import and exporting annotations"
-    ]
-  },
-  {
-    "objectID": "guide_import_export.html#to-sleap",
-    "href": "guide_import_export.html#to-sleap",
-    "title": "Import and exporting annotations",
-    "section": "to SLEAP",
-    "text": "to SLEAP\nTo export your annotations to Lightning Pose, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (SLP format)\nSave your slp file wherever.\n\nIt might take a bit of time (less than a minute) to generate the SLP file for export.",
+    "section": "Exporting annotations",
+    "text": "Exporting annotations\n\nto DeepLabCut\nTo export your annotations to DeepLabCut, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nSave your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml\n\nNote: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.\n\n\nto Lightning Pose\nTo export your annotations to Lightning Pose, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (Lightning Pose format)\nSave your file as “CollectedData.csv” within the folder you imported\n\n\n\nto SLEAP\nTo export your annotations to Lightning Pose, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (SLP format)\nSave your slp file wherever.\n\nIt might take a bit of time (less than a minute) to generate the SLP file for export.",
     "crumbs": [
       "Guides",
       "Import and exporting annotations"
@@ -161,7 +117,51 @@
     "href": "tutorial_deeplabcut.html",
     "title": "Tutorial: Annotate a DeepLabCut folder",
     "section": "",
-    "text": "Importing annotations\nTo import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.\n\n\nSpecifying bodyparts\nTo add or edit the bodyparts for labeling, follow the steps below.\n\nIn the menu, click on: Project &gt; Edit bodyparts\nYou will enter the Bodyparts editor, where you can add or remove bodyparts\nYou can drag bodyparts around to change the order for labeling\n\nIf you have some annotations within your files already, the bodyparts will automatically be populated.\n\n\nAnnotating images\nPlace keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.)\nYou can move a keypoint by clicking it and dragging it. You can delete a keypoint by selecting it and either pressing “d” or clicking the X icon in the toolbar.\nTo navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.\n\n\nExporting annotations\nTo export your annotations to DeepLabCut, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nSave your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml\n\nNote: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.",
+    "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#importing-annotations",
+    "href": "tutorial_deeplabcut.html#importing-annotations",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "",
+    "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#specifying-bodyparts",
+    "href": "tutorial_deeplabcut.html#specifying-bodyparts",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "Specifying bodyparts",
+    "text": "Specifying bodyparts\nTo add or edit the bodyparts for labeling, follow the steps below.\n\nIn the menu, click on: Project &gt; Edit bodyparts\nYou will enter the Bodyparts editor, where you can add or remove bodyparts\nYou can drag bodyparts around to change the order for labeling\n\nIf you have some annotations within your files already, the bodyparts will automatically be populated.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#annotating-images",
+    "href": "tutorial_deeplabcut.html#annotating-images",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "Annotating images",
+    "text": "Annotating images\nPlace keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.)\nYou can move a keypoint by clicking it and dragging it. You can delete a keypoint by selecting it and either pressing “d” or clicking the X icon in the toolbar.\nTo navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#exporting-annotations",
+    "href": "tutorial_deeplabcut.html#exporting-annotations",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "Exporting annotations",
+    "text": "Exporting annotations\nTo export your annotations to DeepLabCut, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nSave your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml\n\nNote: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.",
     "crumbs": [
       "Tutorials",
       "Tutorial: Annotate a DeepLabCut folder"
@@ -172,7 +172,40 @@
     "href": "tutorial_anipose.html",
     "title": "Tutorial: Annotate Anipose format in 3D",
     "section": "",
-    "text": "Format for Anipose 3D labeling data\n\nIt supports an ad-hoc format that should be easy to get from your anipose labeled-data. The structure is:\n\nmain folder with subfolders per camera\nfiles in main folder\n\nCollectedData.csv - file with annotations, can be generated from group of DLC files\ncalibration.toml - calibration file generated by anipose\nconfig.toml - should have camera cropping offsets (if any)\n\nIf you upgrade anipose to latest version (1.1.2), running anipose extract-frames will now generate this format.\nSee example zip above\n\n\n\n\nTo label in 3D:\n\nOpen anivia: https://lambdaloop.com/anivia/\nIn menu: Import &gt; “Load Anipose Dataset”\nSelect the main folder (which contains all the camera subfolders)\nClick “Toggle 3D annotation” button\nYou should see multiple views and points should be green/red\nAnnotation proceeds same as in 2D\n\nSee “Help &gt; Getting Started”\nIf you don’t have any bodyparts, specify them in Project &gt; Edit bodyparts\n\nWhen done, in menu do: Export &gt; Export Annotations (Anipose format)\nSave the file as “CollectedData.csv” in the main Anipose folder\n\nyou may need to change settings in your browser to make it prompt where to save your downloaded file\n\n\n\n\n3D annotation features\n\nSee all the views at once!\nYou can toggle to another view by clicking on it\nPoints are colored by reprojection error: green is low error, red is high error.\n\nIt’s the mean error across all views, per point. You’ll have to discern which view(s) are causing the issue.\n\nProject points based on other views! (this feature feels magical to me)\n\nDelete points you want projected (select and press “d” or click the “x” at the top)\nClick “Project missing points”\nAny point visible in 2+ other views will be projected onto current view",
+    "text": "It supports an ad-hoc format that should be easy to get from your anipose labeled-data. The structure is:\n\nmain folder with subfolders per camera\nfiles in main folder\n\nCollectedData.csv - file with annotations, can be generated from group of DLC files\ncalibration.toml - calibration file generated by anipose\nconfig.toml - should have camera cropping offsets (if any)\n\nIf you upgrade anipose to latest version (1.1.2), running anipose extract-frames will now generate this format.\nSee example zip above",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate Anipose format in 3D"
+    ]
+  },
+  {
+    "objectID": "tutorial_anipose.html#format-for-anipose-3d-labeling-data",
+    "href": "tutorial_anipose.html#format-for-anipose-3d-labeling-data",
+    "title": "Tutorial: Annotate Anipose format in 3D",
+    "section": "",
+    "text": "It supports an ad-hoc format that should be easy to get from your anipose labeled-data. The structure is:\n\nmain folder with subfolders per camera\nfiles in main folder\n\nCollectedData.csv - file with annotations, can be generated from group of DLC files\ncalibration.toml - calibration file generated by anipose\nconfig.toml - should have camera cropping offsets (if any)\n\nIf you upgrade anipose to latest version (1.1.2), running anipose extract-frames will now generate this format.\nSee example zip above",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate Anipose format in 3D"
+    ]
+  },
+  {
+    "objectID": "tutorial_anipose.html#to-label-in-3d",
+    "href": "tutorial_anipose.html#to-label-in-3d",
+    "title": "Tutorial: Annotate Anipose format in 3D",
+    "section": "To label in 3D:",
+    "text": "To label in 3D:\n\nOpen anivia: https://lambdaloop.com/anivia/\nIn menu: Import &gt; “Load Anipose Dataset”\nSelect the main folder (which contains all the camera subfolders)\nClick “Toggle 3D annotation” button\nYou should see multiple views and points should be green/red\nAnnotation proceeds same as in 2D\n\nSee “Help &gt; Getting Started”\nIf you don’t have any bodyparts, specify them in Project &gt; Edit bodyparts\n\nWhen done, in menu do: Export &gt; Export Annotations (Anipose format)\nSave the file as “CollectedData.csv” in the main Anipose folder\n\nyou may need to change settings in your browser to make it prompt where to save your downloaded file",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate Anipose format in 3D"
+    ]
+  },
+  {
+    "objectID": "tutorial_anipose.html#d-annotation-features",
+    "href": "tutorial_anipose.html#d-annotation-features",
+    "title": "Tutorial: Annotate Anipose format in 3D",
+    "section": "3D annotation features",
+    "text": "3D annotation features\n\nSee all the views at once!\nYou can toggle to another view by clicking on it\nPoints are colored by reprojection error: green is low error, red is high error.\n\nIt’s the mean error across all views, per point. You’ll have to discern which view(s) are causing the issue.\n\nProject points based on other views! (this feature feels magical to me)\n\nDelete points you want projected (select and press “d” or click the “x” at the top)\nClick “Project missing points”\nAny point visible in 2+ other views will be projected onto current view",
     "crumbs": [
       "Tutorials",
       "Tutorial: Annotate Anipose format in 3D"

@@ -4,7 +4,7 @@ toc: true
 ---
   
 
-# Importing annotations
+## Importing annotations
 
 To import a DeepLabCut dataset, follow the steps below.
 Note that you can only label one folder at a time. 
@@ -18,7 +18,7 @@ If there are no labels yet, you may need to specify bodyparts (below).
 Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse. 
 
   
-# Specifying bodyparts
+## Specifying bodyparts
 
 To add or edit the bodyparts for labeling, follow the steps below.
 
@@ -28,7 +28,7 @@ To add or edit the bodyparts for labeling, follow the steps below.
 
 If you have some annotations within your files already, the bodyparts will automatically be populated.
 
-# Annotating images
+## Annotating images
 
 Place keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.) 
 
@@ -37,7 +37,7 @@ You can delete a keypoint by selecting it and either pressing "d" or clicking th
 
 To navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.
 
-# Exporting annotations
+## Exporting annotations
 
 To export your annotations to DeepLabCut, follow these steps:
 

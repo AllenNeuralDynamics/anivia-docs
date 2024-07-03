@@ -216,10 +216,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This is a guide to walk you through the steps of importing and exporting various annotation formats.</p>
-<section id="importing-annotations" class="level1">
-<h1>Importing annotations</h1>
-<section id="from-deeplabcut" class="level2">
-<h2 class="anchored" data-anchor-id="from-deeplabcut">from DeepLabCut</h2>
+<section id="importing-annotations" class="level2">
+<h2 class="anchored" data-anchor-id="importing-annotations">Importing annotations</h2>
+<section id="from-deeplabcut" class="level3">
+<h3 class="anchored" data-anchor-id="from-deeplabcut">from DeepLabCut</h3>
 <p>To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.</p>
 <ol type="1">
 <li>In the menu, click on: Import &gt; Load DeepLabCut dataset</li>
@@ -229,8 +229,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>If there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.</p>
 </section>
-<section id="from-lightning-pose" class="level2">
-<h2 class="anchored" data-anchor-id="from-lightning-pose">from Lightning Pose</h2>
+<section id="from-lightning-pose" class="level3">
+<h3 class="anchored" data-anchor-id="from-lightning-pose">from Lightning Pose</h3>
 <p>To import a Lightning Pose dataset, follow the steps below.</p>
 <ol type="1">
 <li>In the menu, click on: Import &gt; Load Lightning Pose dataset</li>
@@ -238,8 +238,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Select that folder and click “Upload”</li>
 </ol>
 </section>
-<section id="from-sleap" class="level2">
-<h2 class="anchored" data-anchor-id="from-sleap">from SLEAP</h2>
+<section id="from-sleap" class="level3">
+<h3 class="anchored" data-anchor-id="from-sleap">from SLEAP</h3>
 <p>To import a SLEAP dataset, follow these steps:</p>
 <ol type="1">
 <li>In the menu, click on: Import &gt; Load SLEAP dataset (SLP file)</li>
@@ -248,10 +248,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Note that SLP file must have the images padded with zeros to account for the javascript h5 loading library. This is already in the latest SLEAP code and will be available in future SLEAP releases. For now, you can use <a href="https://gist.github.com/lambdaloop/cf80b92b4a1218919c71486916eaff90">this python script</a> to pad your video items.</p>
 </section>
 </section>
-<section id="exporting-annotations" class="level1">
-<h1>Exporting annotations</h1>
-<section id="to-deeplabcut" class="level2">
-<h2 class="anchored" data-anchor-id="to-deeplabcut">to DeepLabCut</h2>
+<section id="exporting-annotations" class="level2">
+<h2 class="anchored" data-anchor-id="exporting-annotations">Exporting annotations</h2>
+<section id="to-deeplabcut" class="level3">
+<h3 class="anchored" data-anchor-id="to-deeplabcut">to DeepLabCut</h3>
 <p>To export your annotations to DeepLabCut, follow these steps:</p>
 <ol type="1">
 <li>In the menu, click on: Export &gt; Export Annotations (DeepLabCut format)</li>
@@ -259,16 +259,16 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Note: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.</p>
 </section>
-<section id="to-lightning-pose" class="level2">
-<h2 class="anchored" data-anchor-id="to-lightning-pose">to Lightning Pose</h2>
+<section id="to-lightning-pose" class="level3">
+<h3 class="anchored" data-anchor-id="to-lightning-pose">to Lightning Pose</h3>
 <p>To export your annotations to Lightning Pose, follow these steps:</p>
 <ol type="1">
 <li>In the menu, click on: Export &gt; Export Annotations (Lightning Pose format)</li>
 <li>Save your file as “CollectedData.csv” within the folder you imported</li>
 </ol>
 </section>
-<section id="to-sleap" class="level2">
-<h2 class="anchored" data-anchor-id="to-sleap">to SLEAP</h2>
+<section id="to-sleap" class="level3">
+<h3 class="anchored" data-anchor-id="to-sleap">to SLEAP</h3>
 <p>To export your annotations to Lightning Pose, follow these steps:</p>
 <ol type="1">
 <li>In the menu, click on: Export &gt; Export Annotations (SLP format)</li>

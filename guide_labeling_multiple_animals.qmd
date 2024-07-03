@@ -1,4 +1,6 @@
-# Labeling multiple animals
+---
+title: "Labeling multiple animals"
+---
 
 Anivia supports labeling multiple animals, but only if you export to a SLEAP file currently.
 

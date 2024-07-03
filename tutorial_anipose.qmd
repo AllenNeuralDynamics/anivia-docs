@@ -3,7 +3,7 @@ title: "Tutorial: Annotate Anipose format in 3D"
 toc: true
 ---
 
-# Format for Anipose 3D labeling data 
+## Format for Anipose 3D labeling data 
 - It supports an ad-hoc format that should be easy to get from your anipose labeled-data. The structure is:
   - main folder with subfolders per camera
   - files in main folder
@@ -13,7 +13,7 @@ toc: true
   - If you upgrade anipose to latest version (1.1.2), running anipose extract-frames  will now generate this format.
   - See example zip above
 
-# To label in 3D:
+## To label in 3D:
 - Open anivia: https://lambdaloop.com/anivia/
 - In menu: Import > "Load Anipose Dataset"
 - Select the main folder (which contains all the camera subfolders)
@@ -26,7 +26,7 @@ toc: true
 - Save the file as "CollectedData.csv" in the main Anipose folder
   - you may need to change settings in your browser to make it prompt where to save your downloaded file
 
-# 3D annotation features
+## 3D annotation features
 - See all the views at once!
 - You can toggle to another view by clicking on it
 - Points are colored by reprojection error: green is low error, red is high error.
