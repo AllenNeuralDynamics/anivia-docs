@@ -1,17 +1,13 @@
 ---
-title: "Labeling with anivia: a tutorial"
+title: "Import and exporting annotations"
 toc: true
 ---
 
-Anivia is a new tool to support annotation of animal bodyparts in a web interface.
-The images are loaded in your browser locally.
+This is a guide to walk you through the steps of importing and exporting various annotation formats.
 
-It is a streamlined version of [VGG VIA](https://www.robots.ox.ac.uk/~vgg/software/via/), intended specifically for animal annotation.
+# Importing annotations
 
-# Labeling in 2D
-## Importing annotations
-
-### from DeepLabCut
+## from DeepLabCut
 
 To import a DeepLabCut dataset, follow the steps below.
 Note that you can only label one folder at a time. 
@@ -24,7 +20,7 @@ Note that you can only label one folder at a time.
 If there are no labels yet, you may need to specify bodyparts (below).
 Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse. 
 
-### from Lightning Pose
+## from Lightning Pose
 
 To import a Lightning Pose dataset, follow the steps below.
 
@@ -44,9 +40,9 @@ This is already in the latest SLEAP code and will be available in future SLEAP r
 For now, you can use [this python script](https://gist.github.com/lambdaloop/cf80b92b4a1218919c71486916eaff90) to pad your video items. 
 
 
-## Exporting annotations
+# Exporting annotations
 
-### to DeepLabCut
+## to DeepLabCut
 
 To export your annotations to DeepLabCut, follow these steps:
 
@@ -56,14 +52,14 @@ Replace SCORER above with the actual scorer name you specified at the top of you
  
 Note: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.
 
-### to Lightning Pose
+## to Lightning Pose
 
 To export your annotations to Lightning Pose, follow these steps:
 
 1. In the menu, click on: Export > Export Annotations (Lightning Pose format)
 2. Save your file as "CollectedData.csv" within the folder you imported 
 
-### to SLEAP
+## to SLEAP
 
 To export your annotations to Lightning Pose, follow these steps:
 

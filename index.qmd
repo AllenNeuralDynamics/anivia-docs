@@ -1,7 +1,8 @@
 ---
-title: "anivia-docs"
+title: "Anivia"
 ---
 
-This is a Quarto website.
+[Anivia](https://lambdaloop.com/anivia/ "Anivia website") is a new tool to support annotation of animal bodyparts in a web interface.
+The images are loaded in your browser locally.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+It is a streamlined version of [VGG VIA](https://www.robots.ox.ac.uk/~vgg/software/via/), intended specifically for animal annotation.

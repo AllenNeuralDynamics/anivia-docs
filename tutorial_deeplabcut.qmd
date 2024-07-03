@@ -1,0 +1,62 @@
+---
+title: "Tutorial: Annotate a DeepLabCut folder"
+toc: true
+---
+  
+
+# Importing annotations
+
+To import a DeepLabCut dataset, follow the steps below.
+Note that you can only label one folder at a time. 
+
+1. In the menu, click on: Import > Load DeepLabCut dataset 
+2. Navigate to your DeepLabCut project
+3. Go within the labeled-data
+4. Select a folder and click "Upload"
+
+If there are no labels yet, you may need to specify bodyparts (below).
+Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse. 
+
+  
+# Specifying bodyparts
+
+To add or edit the bodyparts for labeling, follow the steps below.
+
+1. In the menu, click on: Project > Edit bodyparts
+2. You will enter the Bodyparts editor, where you can add or remove bodyparts
+3. You can drag bodyparts around to change the order for labeling
+
+If you have some annotations within your files already, the bodyparts will automatically be populated.
+
+# Labeling images
+
+## annotating images
+
+Place keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.) 
+
+You can move a keypoint by clicking it and dragging it.
+You can delete a keypoint by selecting it and either pressing "d" or clicking the X icon in the toolbar.
+
+To navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.
+
+## labeling multiple animals
+
+Anivia supports labeling multiple animals, but only if you export to a SLEAP file currently.
+
+The interface focuses on one animal "instance" at a time. By default when you click to place points it places them in instance 0. 
+
+Here is how you navigate the instance interface:
+- "i" for new instance (or circle plus in toolbar)
+- "u" to delete an instance  (or circle minus in toolbar)
+- up and down arrows to switch between instances (or circle up and down in toolbar, or just click on a point from that instance)
+
+# Exporting annotations
+
+To export your annotations to DeepLabCut, follow these steps:
+
+1. In the menu, click on: Export > Export Annotations (DeepLabCut format)
+2. Save your file as "CollectedData_SCORER.h5" within the folder within labeled-data that you imported
+Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml
+ 
+Note: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.
+

@@ -7,13 +7,20 @@ website:
     style: "docked"
     search: true
     contents:
-      - anivia_tutorial.qmd
+      - section: "Tutorials"
+        contents:
+          - tutorial_deeplabcut.qmd
+          - tutorial_anipose.qmd
+      - section: "Guides"
+        contents:
+          - guide_import_export.qmd
+      - section: "Reference"
+        contents:
+          - ref_formats.qmd
 
 format:
   html:
     theme: cosmo
+    mainfont: sans-serif
     css: styles.css
     toc: true
-
-
-
