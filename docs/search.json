@@ -18,6 +18,61 @@
     ]
   },
   {
+    "objectID": "tutorial_deeplabcut.html",
+    "href": "tutorial_deeplabcut.html",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "",
+    "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#importing-annotations",
+    "href": "tutorial_deeplabcut.html#importing-annotations",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "",
+    "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#specifying-bodyparts",
+    "href": "tutorial_deeplabcut.html#specifying-bodyparts",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "Specifying bodyparts",
+    "text": "Specifying bodyparts\nTo add or edit the bodyparts for labeling, follow the steps below.\n\nIn the menu, click on: Project &gt; Edit bodyparts\nYou will enter the Bodyparts editor, where you can add or remove bodyparts\nYou can drag bodyparts around to change the order for labeling\n\nIf you have some annotations within your files already, the bodyparts will automatically be populated.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#annotating-images",
+    "href": "tutorial_deeplabcut.html#annotating-images",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "Annotating images",
+    "text": "Annotating images\nPlace keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.)\nYou can move a keypoint by clicking it and dragging it. You can delete a keypoint by selecting it and either pressing “d” or clicking the X icon in the toolbar.\nTo navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#exporting-annotations",
+    "href": "tutorial_deeplabcut.html#exporting-annotations",
+    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "section": "Exporting annotations",
+    "text": "Exporting annotations\nTo export your annotations to DeepLabCut, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nSave your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml\n\nNote: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.",
+    "crumbs": [
+      "Tutorials",
+      "Tutorial: Annotate a DeepLabCut folder"
+    ]
+  },
+  {
     "objectID": "ref_formats.html",
     "href": "ref_formats.html",
     "title": "Supported formats",
@@ -113,58 +168,25 @@
     "text": "Anivia is a new tool to support annotation of animal bodyparts in a web interface. The images are loaded in your browser locally.\nIt is a streamlined version of VGG VIA, intended specifically for animal annotation."
   },
   {
-    "objectID": "tutorial_deeplabcut.html",
-    "href": "tutorial_deeplabcut.html",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "objectID": "explanation_choices_anivia.html",
+    "href": "explanation_choices_anivia.html",
+    "title": "Choices made in designing Anivia",
     "section": "",
-    "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "text": "choices to write about\nproject choices - why i perceived other tools as insufficient - extending VGG VIA instead of writing from scratch\ndisplay of information - how to display reprojection error - UI for projecting points\ntechnical choices - importing files vs server - server for deeplabcut loading - format for Anipose 3D annotation",
     "crumbs": [
-      "Tutorials",
-      "Tutorial: Annotate a DeepLabCut folder"
+      "Explanation",
+      "Choices made in designing Anivia"
     ]
   },
   {
-    "objectID": "tutorial_deeplabcut.html#importing-annotations",
-    "href": "tutorial_deeplabcut.html#importing-annotations",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "objectID": "guide_annotating_in_3d.html",
+    "href": "guide_annotating_in_3d.html",
+    "title": "Guide to annotating in 3D",
     "section": "",
-    "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "text": "See all the views at once!\nYou can toggle to another view by clicking on it\nPoints are colored by reprojection error: green is low error, red is high error.\n\nIt’s the mean error across all views, per point. You’ll have to discern which view(s) are causing the issue.\n\nProject points based on other views! (this feature feels magical to me)\n\nDelete points you want projected (select and press “d” or click the “x” at the top)\nClick “Project missing points”\nAny point visible in 2+ other views will be projected onto current view",
     "crumbs": [
-      "Tutorials",
-      "Tutorial: Annotate a DeepLabCut folder"
-    ]
-  },
-  {
-    "objectID": "tutorial_deeplabcut.html#specifying-bodyparts",
-    "href": "tutorial_deeplabcut.html#specifying-bodyparts",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
-    "section": "Specifying bodyparts",
-    "text": "Specifying bodyparts\nTo add or edit the bodyparts for labeling, follow the steps below.\n\nIn the menu, click on: Project &gt; Edit bodyparts\nYou will enter the Bodyparts editor, where you can add or remove bodyparts\nYou can drag bodyparts around to change the order for labeling\n\nIf you have some annotations within your files already, the bodyparts will automatically be populated.",
-    "crumbs": [
-      "Tutorials",
-      "Tutorial: Annotate a DeepLabCut folder"
-    ]
-  },
-  {
-    "objectID": "tutorial_deeplabcut.html#annotating-images",
-    "href": "tutorial_deeplabcut.html#annotating-images",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
-    "section": "Annotating images",
-    "text": "Annotating images\nPlace keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.)\nYou can move a keypoint by clicking it and dragging it. You can delete a keypoint by selecting it and either pressing “d” or clicking the X icon in the toolbar.\nTo navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.",
-    "crumbs": [
-      "Tutorials",
-      "Tutorial: Annotate a DeepLabCut folder"
-    ]
-  },
-  {
-    "objectID": "tutorial_deeplabcut.html#exporting-annotations",
-    "href": "tutorial_deeplabcut.html#exporting-annotations",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
-    "section": "Exporting annotations",
-    "text": "Exporting annotations\nTo export your annotations to DeepLabCut, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nSave your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml\n\nNote: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.",
-    "crumbs": [
-      "Tutorials",
-      "Tutorial: Annotate a DeepLabCut folder"
+      "Guides",
+      "Guide to annotating in 3D"
     ]
   },
   {

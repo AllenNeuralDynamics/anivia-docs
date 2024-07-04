@@ -1,0 +1,12 @@
+---
+title: "Guide to annotating in 3D"
+---
+
+- See all the views at once!
+- You can toggle to another view by clicking on it
+- Points are colored by reprojection error: green is low error, red is high error.
+  - It's the mean error across all views, per point. You'll have to discern which view(s) are causing the issue.
+- Project points based on other views! (this feature feels magical to me)
+  - Delete points you want projected (select and press "d" or click the "x" at the top)
+  - Click "Project missing points"
+  - Any point visible in 2+ other views will be projected onto current view

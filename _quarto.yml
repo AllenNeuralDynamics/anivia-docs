@@ -16,9 +16,13 @@ website:
         contents:
           - guide_import_export.qmd
           - guide_labeling_multiple_animals.qmd
+          - guide_annotating_in_3d.qmd
       - section: "Reference"
         contents:
           - ref_formats.qmd
+      - section: "Explanation"
+        contents:
+          - explanation_choices_anivia.qmd
 
 format:
   html:
