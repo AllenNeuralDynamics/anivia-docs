@@ -5,14 +5,17 @@ title: "Choices made in designing Anivia"
 choices to write about
 
 project choices
+
 - why i perceived other tools as insufficient
 - extending VGG VIA instead of writing from scratch
 
 display of information
+
 - how to display reprojection error
 - UI for projecting points
 
 technical choices
+
 - importing files vs server
 - server for deeplabcut loading
 - format for Anipose 3D annotation 

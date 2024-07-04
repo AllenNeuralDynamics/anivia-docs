@@ -172,7 +172,7 @@
     "href": "explanation_choices_anivia.html",
     "title": "Choices made in designing Anivia",
     "section": "",
-    "text": "choices to write about\nproject choices - why i perceived other tools as insufficient - extending VGG VIA instead of writing from scratch\ndisplay of information - how to display reprojection error - UI for projecting points\ntechnical choices - importing files vs server - server for deeplabcut loading - format for Anipose 3D annotation",
+    "text": "choices to write about\nproject choices\n\nwhy i perceived other tools as insufficient\nextending VGG VIA instead of writing from scratch\n\ndisplay of information\n\nhow to display reprojection error\nUI for projecting points\n\ntechnical choices\n\nimporting files vs server\nserver for deeplabcut loading\nformat for Anipose 3D annotation",
     "crumbs": [
       "Explanation",
       "Choices made in designing Anivia"
