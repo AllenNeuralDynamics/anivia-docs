@@ -1,0 +1,10 @@
+[
+  {
+    "listing": "/guides_intro.html",
+    "items": [
+      "/guide_annotating_in_3d.html",
+      "/guide_import_export.html",
+      "/guide_labeling_multiple_animals.html"
+    ]
+  }
+]

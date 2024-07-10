@@ -28,6 +28,6 @@ website:
 format:
   html:
     theme: cosmo
-    mainfont: sans-serif
+    mainfont: Arial, sans-serif
     css: styles.css
     toc: true

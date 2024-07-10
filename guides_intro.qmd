@@ -1,0 +1,11 @@
+---
+title: "Guides"
+listing:
+  contents:
+    - guide_*.qmd
+  type: table
+  field-display-names:
+    author: ""
+---
+
+
