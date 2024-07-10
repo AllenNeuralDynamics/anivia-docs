@@ -1,8 +1,21 @@
 ---
-title: "Anivia"
+title: "Anivia: Animal image annotator"
 ---
 
-[Anivia](https://lambdaloop.com/anivia/ "Anivia website") is a new tool to support annotation of animal bodyparts in a web interface.
-The images are loaded in your browser locally.
+**Anivia** is a new web tool  intended specifically for annotation of animal keypoints from images in both 2D and 3D. 
 
-It is a streamlined version of [VGG VIA](https://www.robots.ox.ac.uk/~vgg/software/via/), intended specifically for animal annotation.
+You can find it here: [https://lambdaloop.com/anivia](https://lambdaloop.com/anivia/)
+
+Key features:
+
+- Runs directly in a browser, no installation needed
+- Support for DeepLabCut, SLEAP, Lightning Pose, and Anipose formats
+- Images are loaded in your browser locally
+- For 3D annotation: see reprojection error, project to different viwes, and more!
+
+To get started, try following one of the tutorials for [DeepLabCut (2D)](tutorial_deeplabcut.qmd) or [Anipose (3D)](tutorial_anipose.qmd) annotation datasets. You may also want check the [guides](guides_intro.qmd) for help with a specific workflow.
+
+![](anivia_screenshot.png){fig-alt="A screenshot of the Anivia interface."}
+
+Anivia is derived from the [VGG Image Annotator](https://www.robots.ox.ac.uk/~vgg/software/via/) (Version 2), by Abhishek Dutta, Akush Gupta, Andrew Zisserman and VIA contributors.
+

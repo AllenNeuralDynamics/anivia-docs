@@ -11,7 +11,7 @@
     "href": "guide_labeling_multiple_animals.html",
     "title": "Labeling multiple animals",
     "section": "",
-    "text": "Anivia supports labeling multiple animals, but only if you export to a SLEAP file currently.\nThe interface focuses on one animal “instance” at a time. By default when you click to place points it places them in instance 0.\nHere is how you navigate the instance interface: - “i” for new instance (or circle plus in toolbar) - “u” to delete an instance (or circle minus in toolbar) - up and down arrows to switch between instances (or circle up and down in toolbar, or just click on a point from that instance)",
+    "text": "Anivia supports labeling multiple animals, but only if you export to a SLEAP file currently.\nThe interface focuses on one animal “instance” at a time. By default when you click to place points it places them in instance 0.\nHere is how you navigate the instance interface:\n\n“i” for new instance (or circle plus in toolbar)\n“u” to delete an instance (or circle minus in toolbar)\nup and down arrows to switch between instances (or circle up and down in toolbar, or just click on a point from that instance)",
     "crumbs": [
       "Guides",
       "Labeling multiple animals"
@@ -24,7 +24,7 @@
     "section": "",
     "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
     "crumbs": [
-      "Tutorials",
+      "Getting started",
       "Tutorial: Annotate a DeepLabCut folder"
     ]
   },
@@ -35,7 +35,7 @@
     "section": "",
     "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
     "crumbs": [
-      "Tutorials",
+      "Getting started",
       "Tutorial: Annotate a DeepLabCut folder"
     ]
   },
@@ -46,7 +46,7 @@
     "section": "Specifying bodyparts",
     "text": "Specifying bodyparts\nTo add or edit the bodyparts for labeling, follow the steps below.\n\nIn the menu, click on: Project &gt; Edit bodyparts\nYou will enter the Bodyparts editor, where you can add or remove bodyparts\nYou can drag bodyparts around to change the order for labeling\n\nIf you have some annotations within your files already, the bodyparts will automatically be populated.",
     "crumbs": [
-      "Tutorials",
+      "Getting started",
       "Tutorial: Annotate a DeepLabCut folder"
     ]
   },
@@ -57,7 +57,7 @@
     "section": "Annotating images",
     "text": "Annotating images\nPlace keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.)\nYou can move a keypoint by clicking it and dragging it. You can delete a keypoint by selecting it and either pressing “d” or clicking the X icon in the toolbar.\nTo navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.",
     "crumbs": [
-      "Tutorials",
+      "Getting started",
       "Tutorial: Annotate a DeepLabCut folder"
     ]
   },
@@ -68,7 +68,7 @@
     "section": "Exporting annotations",
     "text": "Exporting annotations\nTo export your annotations to DeepLabCut, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nSave your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml\n\nNote: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.",
     "crumbs": [
-      "Tutorials",
+      "Getting started",
       "Tutorial: Annotate a DeepLabCut folder"
     ]
   },
@@ -163,9 +163,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Anivia",
+    "title": "Anivia: Animal image annotator",
     "section": "",
-    "text": "Anivia is a new tool to support annotation of animal bodyparts in a web interface. The images are loaded in your browser locally.\nIt is a streamlined version of VGG VIA, intended specifically for animal annotation."
+    "text": "Anivia is a new web tool intended specifically for annotation of animal keypoints from images in both 2D and 3D.\nYou can find it here: https://lambdaloop.com/anivia\nKey features:\n\nRuns directly in a browser, no installation needed\nSupport for DeepLabCut, SLEAP, Lightning Pose, and Anipose formats\nImages are loaded in your browser locally\nFor 3D annotation: see reprojection error, project to different viwes, and more!\n\nTo get started, try following one of the tutorials for DeepLabCut (2D) or Anipose (3D) annotation datasets. You may also want check the guides for help with a specific workflow.\n\nAnivia is derived from the VGG Image Annotator (Version 2), by Abhishek Dutta, Akush Gupta, Andrew Zisserman and VIA contributors."
   },
   {
     "objectID": "explanation_choices_anivia.html",
@@ -231,6 +231,16 @@
     "crumbs": [
       "Tutorials",
       "Tutorial: Annotate Anipose format in 3D"
+    ]
+  },
+  {
+    "objectID": "guides_intro.html",
+    "href": "guides_intro.html",
+    "title": "Guides",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nauthor\n\n\n\n\n\n\nGuide to annotating in 3D\n\n\n \n\n\n\n\nImport and exporting annotations\n\n\n \n\n\n\n\nLabeling multiple animals\n\n\n \n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Guides"
     ]
   }
 ]

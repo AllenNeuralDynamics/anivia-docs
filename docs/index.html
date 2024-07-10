@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Anivia – Anivia documentation</title>
+<title>Anivia: Animal image annotator – Anivia documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Tutorials</span></a>
+ <span class="menu-text">Getting started</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a href="./guides_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guides</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Reference</span></a>
+ <span class="menu-text">Explanation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -170,8 +170,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ref_formats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Supported formats</span></a>
+  <a href="./explanation_choices_anivia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choices made in designing Anivia</span></a>
   </div>
 </li>
       </ul>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Explanation</span></a>
+ <span class="menu-text">Reference</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -187,8 +187,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./explanation_choices_anivia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Choices made in designing Anivia</span></a>
+  <a href="./ref_formats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supported formats</span></a>
   </div>
 </li>
       </ul>
@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Anivia</h1>
+<h1 class="title">Anivia: Animal image annotator</h1>
 </div>
 
 
@@ -223,8 +223,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="https://lambdaloop.com/anivia/" title="Anivia website">Anivia</a> is a new tool to support annotation of animal bodyparts in a web interface. The images are loaded in your browser locally.</p>
-<p>It is a streamlined version of <a href="https://www.robots.ox.ac.uk/~vgg/software/via/">VGG VIA</a>, intended specifically for animal annotation.</p>
+<p><strong>Anivia</strong> is a new web tool intended specifically for annotation of animal keypoints from images in both 2D and 3D.</p>
+<p>You can find it here: <a href="https://lambdaloop.com/anivia/">https://lambdaloop.com/anivia</a></p>
+<p>Key features:</p>
+<ul>
+<li>Runs directly in a browser, no installation needed</li>
+<li>Support for DeepLabCut, SLEAP, Lightning Pose, and Anipose formats</li>
+<li>Images are loaded in your browser locally</li>
+<li>For 3D annotation: see reprojection error, project to different viwes, and more!</li>
+</ul>
+<p>To get started, try following one of the tutorials for <a href="./tutorial_deeplabcut.html">DeepLabCut (2D)</a> or <a href="./tutorial_anipose.html">Anipose (3D)</a> annotation datasets. You may also want check the <a href="./guides_intro.html">guides</a> for help with a specific workflow.</p>
+<p><img src="anivia_screenshot.png" class="img-fluid" alt="A screenshot of the Anivia interface."></p>
+<p>Anivia is derived from the <a href="https://www.robots.ox.ac.uk/~vgg/software/via/">VGG Image Annotator</a> (Version 2), by Abhishek Dutta, Akush Gupta, Andrew Zisserman and VIA contributors.</p>
 
 
 

@@ -8,21 +8,22 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Tutorials"
+      - section: "Getting started"
         contents:
           - tutorial_deeplabcut.qmd
           - tutorial_anipose.qmd
       - section: "Guides"
+        href: guides_intro.qmd
         contents:
           - guide_import_export.qmd
           - guide_labeling_multiple_animals.qmd
           - guide_annotating_in_3d.qmd
-      - section: "Reference"
-        contents:
-          - ref_formats.qmd
       - section: "Explanation"
         contents:
           - explanation_choices_anivia.qmd
+      - section: "Reference"
+        contents:
+          - ref_formats.qmd
 
 format:
   html:
