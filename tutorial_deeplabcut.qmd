@@ -1,49 +1,88 @@
 ---
-title: "Tutorial: Annotate a DeepLabCut folder"
+title: "Tutorial: Annotate a DeepLabCut dataset"
 toc: true
 ---
-  
+
+Welcome! In this tutorial, we will import a DeepLabCut dataset, inspect it, test out annotation, and export it again. 
+
+## An example dataset
+
+In this tutorial, we will work with the mouse reaching dataset provided as an example in [DeepLabCut repository](https://github.com/DeepLabCut/DeepLabCut/tree/main/examples/Reaching-Mackenzie-2018-08-30). 
+You may download the dataset from our mirror on [google drive](https://drive.google.com/drive/folders/1_RhMPn-ssqjj5jt_kxzBu70i5Q4o0sVs?usp=drive_link). Alternatively, you may download the DeepLabCut repository from [github](https://github.com/DeepLabCut/DeepLabCut/archive/refs/heads/main.zip) directly and then navigate to the example in the "examples/Reaching-Mackenzie-2018-08-30".
+
+This dataset is from Mathis et al, "Somatosensory Cortex Plays an Essential Role in Forelimb Motor Adaptation in Mice", *Neuron*, 2017.
 
 ## Importing annotations
 
-To import a DeepLabCut dataset, follow the steps below.
-Note that you can only label one folder at a time. 
+Open [Anivia](https://lambdaloop.com/anivia/), then follow the steps below to import this DeepLabCut dataset.
 
 1. In the menu, click on: Import > Load DeepLabCut dataset 
-2. Navigate to your DeepLabCut project
-3. Go within the labeled-data
-4. Select a folder and click "Upload"
+2. Navigate to your DeepLabCut project: Reaching-Mackenzie-2018-08-30
+3. Go within the "labeled-data" folder 
+4. Select the folder "reachingvideo1" and click "Upload"
+5. Confirm you want to "upload" the files
 
-If there are no labels yet, you may need to specify bodyparts (below).
-Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse. 
+::: {.callout-note}
+The upload confirmation just means the folder is sent to the browser, not to a server. Everything is kept locally, with one notable exception below.
 
-  
-## Specifying bodyparts
+For the DeepLabCut h5 annotation specifically, the h5 file with labels must be sent to a server to convert it to a csv to parse due to limitations in javascript.
+:::
 
-To add or edit the bodyparts for labeling, follow the steps below.
+If you follow these steps correctly, your interface should look like the following image. 
 
-1. In the menu, click on: Project > Edit bodyparts
-2. You will enter the Bodyparts editor, where you can add or remove bodyparts
-3. You can drag bodyparts around to change the order for labeling
+![The Anivia interface](images/tutorial_deeplabcut/dlc_import_example.png){width=700 fig-alt="What the dataset should look like imported"}
 
-If you have some annotations within your files already, the bodyparts will automatically be populated.
-
-## Annotating images
-
-Place keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.) 
-
-You can move a keypoint by clicking it and dragging it.
-You can delete a keypoint by selecting it and either pressing "d" or clicking the X icon in the toolbar.
+In the image above, you can see the different labeled points (Hand, Finger1, Joystick1, Joystick2) in the image. 
 
 To navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.
 
+## Specifying bodyparts
+
+Let's look at the bodyparts for this dataset!
+
+In the menu, click on: Project > Edit bodyparts
+
+You will enter the Bodyparts editor, where you can add or remove bodyparts.
+It should look like the image below.
+
+![](images/tutorial_deeplabcut/bodyparts_example.png){width=500 fig-alt="The bodyparts editor window"}
+ 
+If you have some annotations within your files already, the bodyparts will automatically be populated as in this example.
+If there are no labels yet, you will need to specify bodyparts. 
+
+You can drag bodyparts around to change the order for labeling. 
+
+Optionally, you may export the bodyparts to a "bodyparts.toml" file by clicking Export. You can then import this file again to speed up adding bodyparts to a new dataset.
+
+## Annotating images
+
+Okay let's try to annotate!
+
+Place keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts.
+You can move a keypoint by clicking it and dragging it.
+
+To mark a keypoint as not missing (not visible), place it in within 50 pixels of the top left corner. 
+
+Useful shortcuts:
+
+- select a keypoint and press "d" (or X icon in toolbar) to delete it
+- select all keypoints by pressing "a"
+- select a keypoint and press "m" to mark as missing (moving to top left corner)
+
+
 ## Exporting annotations
 
-To export your annotations to DeepLabCut, follow these steps:
+To export your annotations back, follow these steps:
 
 1. In the menu, click on: Export > Export Annotations (DeepLabCut format)
-2. Save your file as "CollectedData_SCORER.h5" within the folder within labeled-data that you imported
-Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml
- 
-Note: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.
+2. Navigate to your DeepLabCut project: Reaching-Mackenzie-2018-08-30
+3. Go back within your labeled-data folder, then within the folder you selected ("reachingvideo1" in this case)
+4. Save your file as "CollectedData_Mackenzie.h5" within the "reachingvideo1" folder, replacing the current labels
 
+For your own project, you will need to replace "Mackenzie" with the actual scorer name you specified at the top of your DeepLabCut config.yaml
+
+That's it!
+
+::: {.callout-note}
+Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.
+:::

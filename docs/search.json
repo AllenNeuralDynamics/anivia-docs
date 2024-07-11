@@ -58,7 +58,10 @@
     "href": "index.html",
     "title": "Anivia: Animal image annotator",
     "section": "",
-    "text": "Anivia is a new web tool intended specifically for annotation of animal keypoints from images in both 2D and 3D.\nYou can find it here: https://lambdaloop.com/anivia\nKey features:\n\nRuns directly in a browser, no installation needed\nSupport for DeepLabCut, SLEAP, Lightning Pose, and Anipose formats\nImages are loaded in your browser locally\nFor 3D annotation: see reprojection error, project to different viwes, and more!\n\nTo get started, try following one of the tutorials for DeepLabCut (2D) or Anipose (3D) annotation datasets. You may also want check the guides for help with a specific workflow.\n\nAnivia is derived from the VGG Image Annotator (Version 2), by Abhishek Dutta, Akush Gupta, Andrew Zisserman and VIA contributors."
+    "text": "Anivia is a new web tool intended specifically for annotation of animal keypoints from images in both 2D and 3D.\nYou can find it here: https://lambdaloop.com/anivia\nKey features:\n\nRuns directly in a browser, no installation needed\nSupport for DeepLabCut, SLEAP, Lightning Pose, and Anipose formats\nImages are loaded in your browser locally\nFor 3D annotation: see reprojection error, project to different viwes, and more!\n\nTo get started, try following one of the tutorials for DeepLabCut (2D) or Anipose (3D) annotation datasets. You may also want check the guides for help with a specific workflow.\n\nAnivia is derived from the VGG Image Annotator (Version 2), by Abhishek Dutta, Akush Gupta, Andrew Zisserman and VIA contributors.",
+    "crumbs": [
+      "Getting started"
+    ]
   },
   {
     "objectID": "guide_import_export.html",
@@ -103,13 +106,6 @@
       "Explanation",
       "Choices made in designing Anivia"
     ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   },
   {
     "objectID": "guide_annotating_in_3d.html",
@@ -191,56 +187,67 @@
   {
     "objectID": "tutorial_deeplabcut.html",
     "href": "tutorial_deeplabcut.html",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "title": "Tutorial: Annotate a DeepLabCut dataset",
     "section": "",
-    "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "text": "Welcome! In this tutorial, we will import a DeepLabCut dataset, inspect it, test out annotation, and export it again.",
     "crumbs": [
       "Getting started",
-      "Tutorial: Annotate a DeepLabCut folder"
+      "Tutorial: Annotate a DeepLabCut dataset"
+    ]
+  },
+  {
+    "objectID": "tutorial_deeplabcut.html#an-example-dataset",
+    "href": "tutorial_deeplabcut.html#an-example-dataset",
+    "title": "Tutorial: Annotate a DeepLabCut dataset",
+    "section": "An example dataset",
+    "text": "An example dataset\nIn this tutorial, we will work with the mouse reaching dataset provided as an example in DeepLabCut repository. You may download the dataset from our mirror on google drive. Alternatively, you may download the DeepLabCut repository from github directly and then navigate to the example in the “examples/Reaching-Mackenzie-2018-08-30”.\nThis dataset is from Mathis et al, “Somatosensory Cortex Plays an Essential Role in Forelimb Motor Adaptation in Mice”, Neuron, 2017.",
+    "crumbs": [
+      "Getting started",
+      "Tutorial: Annotate a DeepLabCut dataset"
     ]
   },
   {
     "objectID": "tutorial_deeplabcut.html#importing-annotations",
     "href": "tutorial_deeplabcut.html#importing-annotations",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
-    "section": "",
-    "text": "To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project\nGo within the labeled-data\nSelect a folder and click “Upload”\n\nIf there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.",
+    "title": "Tutorial: Annotate a DeepLabCut dataset",
+    "section": "Importing annotations",
+    "text": "Importing annotations\nOpen Anivia, then follow the steps below to import this DeepLabCut dataset.\n\nIn the menu, click on: Import &gt; Load DeepLabCut dataset\nNavigate to your DeepLabCut project: Reaching-Mackenzie-2018-08-30\nGo within the “labeled-data” folder\nSelect the folder “reachingvideo1” and click “Upload”\nConfirm you want to “upload” the files\n\n\n\n\n\n\n\nNote\n\n\n\nThe upload confirmation just means the folder is sent to the browser, not to a server. Everything is kept locally, with one notable exception below.\nFor the DeepLabCut h5 annotation specifically, the h5 file with labels must be sent to a server to convert it to a csv to parse due to limitations in javascript.\n\n\nIf you follow these steps correctly, your interface should look like the following image.\n\n\n\nThe Anivia interface\n\n\nIn the image above, you can see the different labeled points (Hand, Finger1, Joystick1, Joystick2) in the image.\nTo navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.",
     "crumbs": [
       "Getting started",
-      "Tutorial: Annotate a DeepLabCut folder"
+      "Tutorial: Annotate a DeepLabCut dataset"
     ]
   },
   {
     "objectID": "tutorial_deeplabcut.html#specifying-bodyparts",
     "href": "tutorial_deeplabcut.html#specifying-bodyparts",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "title": "Tutorial: Annotate a DeepLabCut dataset",
     "section": "Specifying bodyparts",
-    "text": "Specifying bodyparts\nTo add or edit the bodyparts for labeling, follow the steps below.\n\nIn the menu, click on: Project &gt; Edit bodyparts\nYou will enter the Bodyparts editor, where you can add or remove bodyparts\nYou can drag bodyparts around to change the order for labeling\n\nIf you have some annotations within your files already, the bodyparts will automatically be populated.",
+    "text": "Specifying bodyparts\nLet’s look at the bodyparts for this dataset!\nIn the menu, click on: Project &gt; Edit bodyparts\nYou will enter the Bodyparts editor, where you can add or remove bodyparts. It should look like the image below.\n\nIf you have some annotations within your files already, the bodyparts will automatically be populated as in this example. If there are no labels yet, you will need to specify bodyparts.\nYou can drag bodyparts around to change the order for labeling.\nOptionally, you may export the bodyparts to a “bodyparts.toml” file by clicking Export. You can then import this file again to speed up adding bodyparts to a new dataset.",
     "crumbs": [
       "Getting started",
-      "Tutorial: Annotate a DeepLabCut folder"
+      "Tutorial: Annotate a DeepLabCut dataset"
     ]
   },
   {
     "objectID": "tutorial_deeplabcut.html#annotating-images",
     "href": "tutorial_deeplabcut.html#annotating-images",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "title": "Tutorial: Annotate a DeepLabCut dataset",
     "section": "Annotating images",
-    "text": "Annotating images\nPlace keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.)\nYou can move a keypoint by clicking it and dragging it. You can delete a keypoint by selecting it and either pressing “d” or clicking the X icon in the toolbar.\nTo navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.",
+    "text": "Annotating images\nOkay let’s try to annotate!\nPlace keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. You can move a keypoint by clicking it and dragging it.\nTo mark a keypoint as not missing (not visible), place it in within 50 pixels of the top left corner.\nUseful shortcuts:\n\nselect a keypoint and press “d” (or X icon in toolbar) to delete it\nselect all keypoints by pressing “a”\nselect a keypoint and press “m” to mark as missing (moving to top left corner)",
     "crumbs": [
       "Getting started",
-      "Tutorial: Annotate a DeepLabCut folder"
+      "Tutorial: Annotate a DeepLabCut dataset"
     ]
   },
   {
     "objectID": "tutorial_deeplabcut.html#exporting-annotations",
     "href": "tutorial_deeplabcut.html#exporting-annotations",
-    "title": "Tutorial: Annotate a DeepLabCut folder",
+    "title": "Tutorial: Annotate a DeepLabCut dataset",
     "section": "Exporting annotations",
-    "text": "Exporting annotations\nTo export your annotations to DeepLabCut, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nSave your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml\n\nNote: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.",
+    "text": "Exporting annotations\nTo export your annotations back, follow these steps:\n\nIn the menu, click on: Export &gt; Export Annotations (DeepLabCut format)\nNavigate to your DeepLabCut project: Reaching-Mackenzie-2018-08-30\nGo back within your labeled-data folder, then within the folder you selected (“reachingvideo1” in this case)\nSave your file as “CollectedData_Mackenzie.h5” within the “reachingvideo1” folder, replacing the current labels\n\nFor your own project, you will need to replace “Mackenzie” with the actual scorer name you specified at the top of your DeepLabCut config.yaml\nThat’s it!\n\n\n\n\n\n\nNote\n\n\n\nSimilarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.",
     "crumbs": [
       "Getting started",
-      "Tutorial: Annotate a DeepLabCut folder"
+      "Tutorial: Annotate a DeepLabCut dataset"
     ]
   }
 ]

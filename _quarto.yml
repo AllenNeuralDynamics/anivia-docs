@@ -9,6 +9,7 @@ website:
     search: true
     contents:
       - section: "Getting started"
+        href: index.qmd
         contents:
           - tutorial_deeplabcut.qmd
           - tutorial_anipose.qmd

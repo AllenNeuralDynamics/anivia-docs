@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial: Annotate a DeepLabCut folder – Anivia documentation</title>
+<title>Tutorial: Annotate a DeepLabCut dataset – Anivia documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorial_deeplabcut.html">Getting started</a></li><li class="breadcrumb-item"><a href="./tutorial_deeplabcut.html">Tutorial: Annotate a DeepLabCut folder</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Getting started</a></li><li class="breadcrumb-item"><a href="./tutorial_deeplabcut.html">Tutorial: Annotate a DeepLabCut dataset</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorial_deeplabcut.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tutorial: Annotate a DeepLabCut folder</span></a>
+ <span class="menu-text">Tutorial: Annotate a DeepLabCut dataset</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -201,7 +201,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#importing-annotations" id="toc-importing-annotations" class="nav-link active" data-scroll-target="#importing-annotations">Importing annotations</a></li>
+  <li><a href="#an-example-dataset" id="toc-an-example-dataset" class="nav-link active" data-scroll-target="#an-example-dataset">An example dataset</a></li>
+  <li><a href="#importing-annotations" id="toc-importing-annotations" class="nav-link" data-scroll-target="#importing-annotations">Importing annotations</a></li>
   <li><a href="#specifying-bodyparts" id="toc-specifying-bodyparts" class="nav-link" data-scroll-target="#specifying-bodyparts">Specifying bodyparts</a></li>
   <li><a href="#annotating-images" id="toc-annotating-images" class="nav-link" data-scroll-target="#annotating-images">Annotating images</a></li>
   <li><a href="#exporting-annotations" id="toc-exporting-annotations" class="nav-link" data-scroll-target="#exporting-annotations">Exporting annotations</a></li>
@@ -211,9 +212,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorial_deeplabcut.html">Getting started</a></li><li class="breadcrumb-item"><a href="./tutorial_deeplabcut.html">Tutorial: Annotate a DeepLabCut folder</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Getting started</a></li><li class="breadcrumb-item"><a href="./tutorial_deeplabcut.html">Tutorial: Annotate a DeepLabCut dataset</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tutorial: Annotate a DeepLabCut folder</h1>
+<h1 class="title">Tutorial: Annotate a DeepLabCut dataset</h1>
 </div>
 
 
@@ -230,41 +231,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Welcome! In this tutorial, we will import a DeepLabCut dataset, inspect it, test out annotation, and export it again.</p>
+<section id="an-example-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="an-example-dataset">An example dataset</h2>
+<p>In this tutorial, we will work with the mouse reaching dataset provided as an example in <a href="https://github.com/DeepLabCut/DeepLabCut/tree/main/examples/Reaching-Mackenzie-2018-08-30">DeepLabCut repository</a>. You may download the dataset from our mirror on <a href="https://drive.google.com/drive/folders/1_RhMPn-ssqjj5jt_kxzBu70i5Q4o0sVs?usp=drive_link">google drive</a>. Alternatively, you may download the DeepLabCut repository from <a href="https://github.com/DeepLabCut/DeepLabCut/archive/refs/heads/main.zip">github</a> directly and then navigate to the example in the “examples/Reaching-Mackenzie-2018-08-30”.</p>
+<p>This dataset is from Mathis et al, “Somatosensory Cortex Plays an Essential Role in Forelimb Motor Adaptation in Mice”, <em>Neuron</em>, 2017.</p>
+</section>
 <section id="importing-annotations" class="level2">
 <h2 class="anchored" data-anchor-id="importing-annotations">Importing annotations</h2>
-<p>To import a DeepLabCut dataset, follow the steps below. Note that you can only label one folder at a time.</p>
+<p>Open <a href="https://lambdaloop.com/anivia/">Anivia</a>, then follow the steps below to import this DeepLabCut dataset.</p>
 <ol type="1">
 <li>In the menu, click on: Import &gt; Load DeepLabCut dataset</li>
-<li>Navigate to your DeepLabCut project</li>
-<li>Go within the labeled-data</li>
-<li>Select a folder and click “Upload”</li>
+<li>Navigate to your DeepLabCut project: Reaching-Mackenzie-2018-08-30</li>
+<li>Go within the “labeled-data” folder</li>
+<li>Select the folder “reachingvideo1” and click “Upload”</li>
+<li>Confirm you want to “upload” the files</li>
 </ol>
-<p>If there are no labels yet, you may need to specify bodyparts (below). Note: Due to no available libraries to parse pytables in javascript, just the h5 file with labels (not images) is sent to server to convert it to a csv to parse.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The upload confirmation just means the folder is sent to the browser, not to a server. Everything is kept locally, with one notable exception below.</p>
+<p>For the DeepLabCut h5 annotation specifically, the h5 file with labels must be sent to a server to convert it to a csv to parse due to limitations in javascript.</p>
+</div>
+</div>
+<p>If you follow these steps correctly, your interface should look like the following image.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tutorial_deeplabcut/dlc_import_example.png" class="img-fluid figure-img" alt="What the dataset should look like imported" width="700"></p>
+<figcaption>The Anivia interface</figcaption>
+</figure>
+</div>
+<p>In the image above, you can see the different labeled points (Hand, Finger1, Joystick1, Joystick2) in the image.</p>
+<p>To navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.</p>
 </section>
 <section id="specifying-bodyparts" class="level2">
 <h2 class="anchored" data-anchor-id="specifying-bodyparts">Specifying bodyparts</h2>
-<p>To add or edit the bodyparts for labeling, follow the steps below.</p>
-<ol type="1">
-<li>In the menu, click on: Project &gt; Edit bodyparts</li>
-<li>You will enter the Bodyparts editor, where you can add or remove bodyparts</li>
-<li>You can drag bodyparts around to change the order for labeling</li>
-</ol>
-<p>If you have some annotations within your files already, the bodyparts will automatically be populated.</p>
+<p>Let’s look at the bodyparts for this dataset!</p>
+<p>In the menu, click on: Project &gt; Edit bodyparts</p>
+<p>You will enter the Bodyparts editor, where you can add or remove bodyparts. It should look like the image below.</p>
+<p><img src="images/tutorial_deeplabcut/bodyparts_example.png" class="img-fluid" alt="The bodyparts editor window" width="500"></p>
+<p>If you have some annotations within your files already, the bodyparts will automatically be populated as in this example. If there are no labels yet, you will need to specify bodyparts.</p>
+<p>You can drag bodyparts around to change the order for labeling.</p>
+<p>Optionally, you may export the bodyparts to a “bodyparts.toml” file by clicking Export. You can then import this file again to speed up adding bodyparts to a new dataset.</p>
 </section>
 <section id="annotating-images" class="level2">
 <h2 class="anchored" data-anchor-id="annotating-images">Annotating images</h2>
-<p>Place keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. (See above for how to edit the bodyparts.)</p>
-<p>You can move a keypoint by clicking it and dragging it. You can delete a keypoint by selecting it and either pressing “d” or clicking the X icon in the toolbar.</p>
-<p>To navigate across images, you can use the left/right arrow keys, clicking in the file menu, or click the left/right arrows in the toolbar.</p>
+<p>Okay let’s try to annotate!</p>
+<p>Place keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. You can move a keypoint by clicking it and dragging it.</p>
+<p>To mark a keypoint as not missing (not visible), place it in within 50 pixels of the top left corner.</p>
+<p>Useful shortcuts:</p>
+<ul>
+<li>select a keypoint and press “d” (or X icon in toolbar) to delete it</li>
+<li>select all keypoints by pressing “a”</li>
+<li>select a keypoint and press “m” to mark as missing (moving to top left corner)</li>
+</ul>
 </section>
 <section id="exporting-annotations" class="level2">
 <h2 class="anchored" data-anchor-id="exporting-annotations">Exporting annotations</h2>
-<p>To export your annotations to DeepLabCut, follow these steps:</p>
+<p>To export your annotations back, follow these steps:</p>
 <ol type="1">
 <li>In the menu, click on: Export &gt; Export Annotations (DeepLabCut format)</li>
-<li>Save your file as “CollectedData_SCORER.h5” within the folder within labeled-data that you imported Replace SCORER above with the actual scorer name you specified at the top of your DeepLabCut config.yaml</li>
+<li>Navigate to your DeepLabCut project: Reaching-Mackenzie-2018-08-30</li>
+<li>Go back within your labeled-data folder, then within the folder you selected (“reachingvideo1” in this case)</li>
+<li>Save your file as “CollectedData_Mackenzie.h5” within the “reachingvideo1” folder, replacing the current labels</li>
 </ol>
-<p>Note: Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.</p>
+<p>For your own project, you will need to replace “Mackenzie” with the actual scorer name you specified at the top of your DeepLabCut config.yaml</p>
+<p>That’s it!</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Similarly to importing, due to limitations on h5 libraries in javascript, the labels are sent to server to convert them to generate an h5 file. Again, no images are ever sent out of your machine, only labels.</p>
+</div>
+</div>
 
 
 </section>

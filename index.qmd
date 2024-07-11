@@ -15,7 +15,7 @@ Key features:
 
 To get started, try following one of the tutorials for [DeepLabCut (2D)](tutorial_deeplabcut.qmd) or [Anipose (3D)](tutorial_anipose.qmd) annotation datasets. You may also want check the [guides](guides_intro.qmd) for help with a specific workflow.
 
-![](anivia_screenshot.png){fig-alt="A screenshot of the Anivia interface."}
+![](images/index/anivia_screenshot.png){fig-alt="A screenshot of the Anivia interface."}
 
 Anivia is derived from the [VGG Image Annotator](https://www.robots.ox.ac.uk/~vgg/software/via/) (Version 2), by Abhishek Dutta, Akush Gupta, Andrew Zisserman and VIA contributors.
 
