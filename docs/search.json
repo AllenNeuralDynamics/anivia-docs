@@ -145,7 +145,7 @@
     "href": "guide_annotating_in_3d.html",
     "title": "Guide to annotating in 3D",
     "section": "",
-    "text": "See all the views at once!\nYou can toggle to another view by clicking on it\nPoints are colored by reprojection error: green is low error, red is high error.\n\nIt’s the mean error across all views, per point. You’ll have to discern which view(s) are causing the issue.\n\nProject points based on other views! (this feature feels magical to me)\n\nDelete points you want projected (select and press “d” or click the “x” at the top)\nClick “Project missing points”\nAny point visible in 2+ other views will be projected onto current view",
+    "text": "Okay, we’re set up to label. Let’s try labeling in 3D! Click “Toggle 3D annotation” button to enable 3D annotation.\nYou should see the following image: \nYou should see multiple views at the bottom. You can click on another view to jump to that camera.\nNote also the colors of the points! In 3D annotation mode, green means low reprojection error across views (&lt; 2 pixels) and red means high error (&gt; 15 pixels). You may see orange-ish points that have somewhere between 2 and 15 pixels. It’s the mean error across all views, per point. You’ll have to discern which view(s) are causing the issue.",
     "crumbs": [
       "Guides",
       "Guide to annotating in 3D"
@@ -281,6 +281,39 @@
     "crumbs": [
       "Getting started",
       "Tutorial: Annotate a DeepLabCut dataset"
+    ]
+  },
+  {
+    "objectID": "guide_annotating_in_3d.html#opening-the-3d-interface",
+    "href": "guide_annotating_in_3d.html#opening-the-3d-interface",
+    "title": "Guide to annotating in 3D",
+    "section": "",
+    "text": "Okay, we’re set up to label. Let’s try labeling in 3D! Click “Toggle 3D annotation” button to enable 3D annotation.\nYou should see the following image: \nYou should see multiple views at the bottom. You can click on another view to jump to that camera.\nNote also the colors of the points! In 3D annotation mode, green means low reprojection error across views (&lt; 2 pixels) and red means high error (&gt; 15 pixels). You may see orange-ish points that have somewhere between 2 and 15 pixels. It’s the mean error across all views, per point. You’ll have to discern which view(s) are causing the issue.",
+    "crumbs": [
+      "Guides",
+      "Guide to annotating in 3D"
+    ]
+  },
+  {
+    "objectID": "guide_annotating_in_3d.html#annotating",
+    "href": "guide_annotating_in_3d.html#annotating",
+    "title": "Guide to annotating in 3D",
+    "section": "Annotating",
+    "text": "Annotating\nHow to annotate?\nPlace keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. You can move a keypoint by clicking it and dragging it. Whenever a keypoint is placed or moved, the error is recomputed and all points are recolored.\nTo mark a keypoint as not missing (not visible), place it in within 50 pixels of the top left corner.\nUseful shortcuts:\n\nselect a keypoint and press “d” (or X icon in toolbar) to delete it\nselect all keypoints by pressing “a”\nselect a keypoint and press “m” to mark as missing (moving to top left corner)",
+    "crumbs": [
+      "Guides",
+      "Guide to annotating in 3D"
+    ]
+  },
+  {
+    "objectID": "guide_annotating_in_3d.html#projecting-points",
+    "href": "guide_annotating_in_3d.html#projecting-points",
+    "title": "Guide to annotating in 3D",
+    "section": "Projecting points",
+    "text": "Projecting points\nNow let me introduce you to a feature that feels magical to me.\nIf you have a point labeled in 2 or more views, you can triangulate and project that point onto a new view!\nTo do so, make sure that the point is deleted from the current view (select and press “d” or click the “x” at the top if needed). Then, click the “Project missing points” button. Any point visible in 2+ other views will be projected onto current view!\nI find this useful for placing keypoints initially, especially in views where the pose is hard to annotate. The accuracy of the projection will depend on the accuracy of the labels in other views and the camera calibrations.",
+    "crumbs": [
+      "Guides",
+      "Guide to annotating in 3D"
     ]
   }
 ]

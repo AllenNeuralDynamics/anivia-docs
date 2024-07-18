@@ -196,8 +196,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#opening-the-3d-interface" id="toc-opening-the-3d-interface" class="nav-link active" data-scroll-target="#opening-the-3d-interface">Opening the 3D interface</a></li>
+  <li><a href="#annotating" id="toc-annotating" class="nav-link" data-scroll-target="#annotating">Annotating</a></li>
+  <li><a href="#projecting-points" id="toc-projecting-points" class="nav-link" data-scroll-target="#projecting-points">Projecting points</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -221,22 +229,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="opening-the-3d-interface" class="level2">
+<h2 class="anchored" data-anchor-id="opening-the-3d-interface">Opening the 3D interface</h2>
+<p>Okay, we’re set up to label. Let’s try labeling in 3D! Click “Toggle 3D annotation” button to enable 3D annotation.</p>
+<p>You should see the following image: <img src="images/tutorial_anipose/anipose_import_example_3d.png" class="img-fluid" alt="What the dataset should look like labeled in 3D" width="700"></p>
+<p>You should see multiple views at the bottom. You can click on another view to jump to that camera.</p>
+<p>Note also the colors of the points! In 3D annotation mode, green means low reprojection error across views (&lt; 2 pixels) and red means high error (&gt; 15 pixels). You may see orange-ish points that have somewhere between 2 and 15 pixels. It’s the mean error across all views, per point. You’ll have to discern which view(s) are causing the issue.</p>
+</section>
+<section id="annotating" class="level2">
+<h2 class="anchored" data-anchor-id="annotating">Annotating</h2>
+<p>How to annotate?</p>
+<p>Place keypoints by clicking in the image. The keypoints will be placed following the order of bodyparts. You can move a keypoint by clicking it and dragging it. Whenever a keypoint is placed or moved, the error is recomputed and all points are recolored.</p>
+<p>To mark a keypoint as not missing (not visible), place it in within 50 pixels of the top left corner.</p>
+<p>Useful shortcuts:</p>
 <ul>
-<li>See all the views at once!</li>
-<li>You can toggle to another view by clicking on it</li>
-<li>Points are colored by reprojection error: green is low error, red is high error.
-<ul>
-<li>It’s the mean error across all views, per point. You’ll have to discern which view(s) are causing the issue.</li>
-</ul></li>
-<li>Project points based on other views! (this feature feels magical to me)
-<ul>
-<li>Delete points you want projected (select and press “d” or click the “x” at the top)</li>
-<li>Click “Project missing points”</li>
-<li>Any point visible in 2+ other views will be projected onto current view</li>
-</ul></li>
+<li>select a keypoint and press “d” (or X icon in toolbar) to delete it</li>
+<li>select all keypoints by pressing “a”</li>
+<li>select a keypoint and press “m” to mark as missing (moving to top left corner)</li>
 </ul>
+</section>
+<section id="projecting-points" class="level2">
+<h2 class="anchored" data-anchor-id="projecting-points">Projecting points</h2>
+<p>Now let me introduce you to a feature that feels magical to me.</p>
+<p>If you have a point labeled in 2 or more views, you can triangulate and project that point onto a new view!</p>
+<p>To do so, make sure that the point is deleted from the current view (select and press “d” or click the “x” at the top if needed). Then, click the “Project missing points” button. Any point visible in 2+ other views will be projected onto current view!</p>
+<p>I find this useful for placing keypoints initially, especially in views where the pose is hard to annotate. The accuracy of the projection will depend on the accuracy of the labels in other views and the camera calibrations.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
